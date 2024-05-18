@@ -1,0 +1,81 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="MasterPage.master.cs" Inherits="DoAnNhom.MasterPage" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <title></title>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+    <link rel="stylesheet" href="~/Content/bootstrap.min.css" />
+    <script src="~/Scripts/jquery-3.3.1.min.js"></script>
+    <script src="~/Scripts/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        .header-container .navbar {
+            background-color: #e3f2fd;
+        }
+
+        .page-footer {
+            background: #e3f2fd;
+            left: 0px;
+            right: 0;
+            bottom: 0;
+            position: fixed;
+            text-align: center;
+            padding: 7px;
+            font-size: 14px;
+            border-top: 1px solid #e4e4e4;
+            z-index: 3;
+        }
+    </style>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <div>
+            <header class="header-container">
+                <nav class="navbar navbar-expand-lg bg-body-tertiary">
+                    <div class="container">
+                        <a class="navbar-brand" href="Default.aspx">NEWBRAND</a>
+                        <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+                            <ul class="navbar-nav me-5 mb-2 mb-lg-0">
+                                <li class="nav-item">
+                                    <a class="nav-link" href="Default.aspx?danhmuc=1">IPHONE</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="Default.aspx?danhmuc=2">SAMSUNG</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="Default.aspx?danhmuc=3">XIAOMI</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="Default.aspx?danhmuc=4">OPPO</a>
+                                </li>
+                            </ul>
+                            <input class="form-control ms-lg-5" type="search" placeholder="Search" aria-label="Search">
+                            <div>
+                                <a class="text-dark p-4" href="Cart.aspx"><i class="fa-solid fa-cart-shopping fs-5"></i></a>
+                            </div>
+                        </div>
+                        <div>
+                            <ul class="navbar-nav me-5 mb-2 mb-lg-0 d-flex">
+                                <li class="nav-item">
+                                    <a class="nav-link" href="Login.aspx">ĐĂNG NHẬP</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="Register.aspx">ĐĂNG KÝ</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </nav>
+            </header>
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+            </asp:ContentPlaceHolder>
+            <footer class="page-footer">
+                <p class="mb-0">Copyright © 2021. All right reserved.</p>
+            </footer>
+        </div>
+    </form>
+</body>
+</html>
